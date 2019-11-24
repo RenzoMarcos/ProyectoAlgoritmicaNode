@@ -1,0 +1,46 @@
+Documentacion de un CRUD/LOGIN
+
+Realizar la descarga de Git 
+Git bash .- Interprete de líneas de comando
+Registrarse en GitHub - Aceptar la confirmación - etc
+Lo que sea necesario para la creación de la cuenta 
+Se realiza la creación de un repositorio 
+La diferencia entre el público y el privado
+La aparición de líneas cuando lo creas
+
+Git init .- Crear un repositorio local en nuestro ordenador, ya sea una laptop o una computadora
+Git add  . .- Envía a nuestro repositorio local los archivos -> Staying area
+Git Status .- Mostrará los archivos que se encuentran o no en nuestra Staying area
+Git commit .- Agregar ( -m) Significa que le estás añadiendo un mensaje, para que esté definitivamente en nuestro repositorio git local
+Es posible que te salte unas líneas de error al momento de realizar esto y es porque se necesita un correo de reconocimineto, pues lo que lee el GIT es el nombre de usuario en tu ordenador, en mi caso es Renzo
+Así que realizaremos:
+Git config --global user.email (El email con el que te logeaste en GitHub)
+Git config --global user.email "renzochepu12345@gmail.com" 
+Git commit 
+Luego de esto aparecerá un editor de código en el terminal "Bin"
+Debes presionar "i" para empezar a escribir
+Darle a escape y escribir :wq
+Señalará todos los cambios que se hicieron y crearán un código para cada archivo
+Git log .- Señalará la versión del commit
+Git checkout -- "Nombre del archivo al que se le haya realizado un cambio" .- Revierte los cambios hechos
+Git diif .- Muestra las diferencias entre los archivos modificados 
+Si se desea agregar los cambios en vez de modificarlos, se realiza:
+Git add .
+Git commit -m "........(Lo que pondrás para el commit)"
+Y se abrirá el editor de código "Bin"
+Git branch .- Muestra las ramas en las que estás trabajando 
+Git branch (Nombre de una rama que desees crear) .- Creará una rama 
+Git checkout (Nombre de la rama creada) .- Te moverá a esa rama (No afectará a la rama principal que en este caso es la rama Master)
+
+
+Si se desea ignorar una carpeta en nuestro entorno de trabajo, se crea un documento llamado (.gitignore)
+Dentro de esto se coloca el nombre de las carpetas que se desean ignorar, normalmente son donde se realizan las pruebas
+Al presionar Git status solo mostrará la carpeta .gitignore
+
+
+
+Subir al Git hub:
+Git remote add origin .- Asocia en remoto un repositorio - asociar la URL del respositorio que se ha creado- con nuestro repositorio local
+Git push .- Envía los archivos - los empuja
+
+
