@@ -1,5 +1,7 @@
 Documentacion de un CRUD/LOGIN
 
+
+* USO DE GIT*
 Realizar la descarga de Git 
 Git bash .- Interprete de líneas de comando
 Registrarse en GitHub - Aceptar la confirmación - etc
@@ -42,5 +44,12 @@ Al presionar Git status solo mostrará la carpeta .gitignore
 Subir al Git hub:
 Git remote add origin .- Asocia en remoto un repositorio - asociar la URL del respositorio que se ha creado- con nuestro repositorio local
 Git push .- Envía los archivos - los empuja
+Te saltará una interfaz de Login en el cual pondrás tu Username de GitHub y tu contraseña del mismo
+
+Si queremos copiar exactamente igual el repositorio con nuestro proyecto se hace uso del
+Git clone (Dirección del proyecto)
+
+
+*REALIZACIÓN DEL PROYECTO*
 
 
