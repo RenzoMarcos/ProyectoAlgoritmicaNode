@@ -1,29 +1,10 @@
-'use strict';
+const mongoose = require('mongoose');
 
-var MongoClient = require('mongodb').MongoClient;
+mongoose.connect('mongodb://localhost/DB-Notas', {
+	useCreateIndex: true,
+	useNewUrlParser: true,
+	useFindAndModify: false
+})
 
-module.exports = function (uri, opts) {
-	if (typeof uri !== 'string') {
-		throw new TypeError('Expected uri to be a string');
-	}
-
-	opts = opts || {};
-	var property = opts.property || 'db';
-
-	var connection;
-
-	return function expressMongoDb(req, res, next) {
-		if (!connection) {
-			connection = MongoClient.connect(uri, opts);
-		}
-
-		connection
-			.then(function (db) {
-				req[property] = db;
-				next();
-			})
-			.catch(function (err) {
-				connection = undefined;
-				next(err);
-			});
-	};
+	.then(db => console.log('La base de datos está conectada'))
+	.catch(err => console.error('error'));

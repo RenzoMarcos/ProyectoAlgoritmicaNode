@@ -1,30 +1,49 @@
 const express = require('express'); // Requiere el módulo Express y se almacena en una constante del mismo nombre
 const path = require('path');       // Requiere el módulo path que viene junto con Node
-const exphbs = require('express-handlebars')
+const exphbs = require('express-handlebars');
+const methodOverride = require('method-override');
+const session = require('express-session');
+
 
 // Inicializaciones 
 const app = express();
+require('./database');
 
 
 // Configuraciones (Settings)
-app.set('port', process.env.PORT || 3000); // Crea configuración en el puerto 3000 si no existe otro en nuestra ordenador
-app.set('views', path.join(     dirname, 'views')); //Sirve para indicarle a Node que la carpeta se encuentra dentro de Src, dirname (constante de Node)
+app.set('port', process.env.PORT || 3000);          // Crea configuración en el puerto 3000 si no existe otro en nuestra ordenador
+app.set('views', path.join(__dirname, 'views'));     //Sirve para indicarle a Node que la carpeta se encuentra dentro de Src, dirname (constante de Node)
 app.engine('.hbs', exphbs({
     defaultLayout:'main',
     layoutsDir: path.join(app.get('views'), 'layouts'),
-    partialsDir: ,
-    extname:
+    partialsDir: path.join(app.get('views'), 'partial'),
+    extname:'.hbs'
 })); 
+app.set('view engine', '.hbs');
+
 
 // Middlewares (Funciones que serán ejecutadas)
-
+app.use(express.urlencoded({extended: false}));     //Cuando se envía un dato se pueda interpretar, el extended es para no recibir imágenes, solo datos
+app.use(methodOverride('_method'));
+app.use(session({
+    secret: 'mysecretapp',
+    resave: true,
+    saveUninitialized: true
+}))
 
 
 // Global Variables
 
 
 
+//Rutas
+app.use(require('./routes/Index'));
+app.use(require('./routes/Notes'));
+app.use(require('./routes/Users'));
+
+
 //Static Files
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 
