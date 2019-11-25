@@ -10,9 +10,9 @@ const app = express();
 app.set('port', process.env.PORT || 3000); // Crea configuración en el puerto 3000 si no existe otro en nuestra ordenador
 app.set('views', path.join(     dirname, 'views')); //Sirve para indicarle a Node que la carpeta se encuentra dentro de Src, dirname (constante de Node)
 app.engine('.hbs', exphbs({
-    defaultLayout:,
-    layoutsDir:,
-    partialsDir:,
+    defaultLayout:'main',
+    layoutsDir: path.join(app.get('views'), 'layouts'),
+    partialsDir: ,
     extname:
 })); 
 

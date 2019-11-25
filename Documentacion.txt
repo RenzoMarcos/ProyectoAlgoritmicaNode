@@ -67,4 +67,4 @@ Luego añadiremos diferentes módulos
 *passport-local .- permite autenticar al usuario
 *bcryptjs .- cifra la contraseña de un usuario
 *connect-flash .- poder enviar mensajes para advertirle al usuario de ciertas cosas al momento de logearse
-
+* nodemon -D .- me permite reiniciar el servidor sin necesidad de cancelarlo y activarlo con (CTRL + C)
