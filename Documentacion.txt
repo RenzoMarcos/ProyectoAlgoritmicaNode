@@ -52,4 +52,19 @@ Git clone (Dirección del proyecto)
 
 *REALIZACIÓN DEL PROYECTO*
 
+Primero empezaremos usando el editor de texto Visual Studio Code en su versión más reciente 
+La descarga del NodeJS
+Luego de estos empezaremos con la descarga del Framework Express 
+Abriremos el terminal para realizar esto y escribiremos 
+npm install express
+Y empezará su instalación
+Luego añadiremos diferentes módulos
+*express-handlebars .- Motor de plantillas -> Extiende el HTML 
+*express-session .- Autenticación de datos
+*method-override 
+*mongoose .- módulo que permite unir Express con una base de datos, en este caso Mongo DB
+*passport 
+*passport-local .- permite autenticar al usuario
+*bcryptjs .- cifra la contraseña de un usuario
+*connect-flash .- poder enviar mensajes para advertirle al usuario de ciertas cosas al momento de logearse
 
