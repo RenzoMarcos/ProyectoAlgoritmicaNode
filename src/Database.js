@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/DB-Notas', {
+mongoose.connect('mongodb://localhost/DB-Users', {
 	useCreateIndex: true,
 	useNewUrlParser: true,
 	useFindAndModify: false

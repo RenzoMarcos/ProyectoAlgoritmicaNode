@@ -3,6 +3,7 @@ const path = require('path');       // Requiere el módulo path que viene junto 
 const exphbs = require('express-handlebars');
 const methodOverride = require('method-override');
 const session = require('express-session');
+const flash = require('connect-flash');
 
 
 // Inicializaciones 
@@ -29,11 +30,15 @@ app.use(session({
     secret: 'mysecretapp',
     resave: true,
     saveUninitialized: true
-}))
-
+}));
+app.use(flash());
 
 // Global Variables
-
+app.use((request, response, next) =>{
+    response.locals.success_msg = request.flash('succes_msg');
+    response.locals.error_msg = request.flash('error_msg')
+    next();
+});
 
 
 //Rutas
