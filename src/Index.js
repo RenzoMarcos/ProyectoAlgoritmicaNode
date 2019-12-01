@@ -47,6 +47,7 @@ app.use(require('./routes/Notes'));
 app.use(require('./routes/Users'));
 
 
+
 //Static Files
 app.use(express.static(path.join(__dirname, 'public')));
 

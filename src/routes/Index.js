@@ -8,5 +8,12 @@ router.get('/about', (request, response) => {
     response.render('About');
 });
 
+router.get('/tienda', (request, response) => {
+    response.render('tienda');
+});
+
+router.get('/confirmo', (request, response) => {
+    response.render('confirmo');
+});
 module.exports = router;
 
